@@ -1,14 +1,3 @@
-/*
-    Responda las siguientes preguntas.
-*/
-
-/*
-    ¿cuál es la diferencia entre id y class? 
-*/
-
-/*
-    ¿Qué sucede entre las líneas 5 y 8?
-*/
 *{
     margin: 0px;
     padding: 0px;
@@ -22,26 +11,20 @@ h2{
     font-size: 20px;
 }
 
-/*
-    ¿para qué nos sirve diplay: block?
-*/
+
 
 header, nav, section, article, aside, footer{
     display: block;
 }
 
-/*
-    ¿para qué se utiliza text-align: center?
-*/
+
 
 body{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/*
-    ¿Para qué se está utilizando el identificado #caja_principal?
-*/
+
 #caja_principal{
     width: 900px;
     margin: 15px auto;
@@ -49,9 +32,7 @@ body{
 
 }
 
-/*
-    ¿qué es padding y para qué se utiliza?
-*/
+
 #cabecera{
     background: #FAFAFA;
     border: 1px solid #000000;
@@ -59,9 +40,7 @@ body{
    
 }
 
-/*
-    ¿para qué nos sirve border, y cómo se utiliza?
-*/
+
 
 #barra_navegacion{
     background: #F2F2F2;
@@ -70,22 +49,14 @@ body{
 
 }
 
-/*
-    ¿para qué nos sirve display: inline-block y list-style?
-*/
+
 #barra_navegacion li{
     display: inline-block;
     list-style: none;
     padding: 5px;
 }
 
-/*
-    ¿comó afecta la propiedad "float" en los elementos (etiquetas o selectores) html?
 
-    ¿qué es margin y para qué se utiliza?
-
-    ¿para qué se utiliza la propiedad background?
-*/
 
 #seccion{
     float: left;
@@ -94,9 +65,7 @@ body{
     background: #E6E6E6;
 }
 
-/*
-    ¿porqué margin tiene dos valores (20px 0px) y cuantos valores puede tener?
-*/
+
 
 #columna{
     float: right;
@@ -106,9 +75,6 @@ body{
     background: #D8D8D8;
 }
 
-/*
-    ¿para que se utiliza el clear both y border-top?
-*/
 
 #pie{
     clear: both;
@@ -117,7 +83,7 @@ body{
     border-top: 2px solid black;
 }
 
-/*----------------------- 2 ----------------------*/
+/*------------------- index ------------- */
 
 #caja{
     width: 900px;
@@ -168,7 +134,7 @@ body{
 #columna3{
     float: left;
     width: 50px;
-    margin: 0px 10px 0px 0px ;
+    margin: 20px 20px 0px  ;
     padding: 20px;
 }
 
@@ -182,6 +148,36 @@ body{
 #columna4{
     float: left;
     width: 50px;
-    margin: 0px 10px 0px 0px ;
+    margin: 20px 20px 0px ;
     padding: 20px;
+}
+
+#seccion5{
+    float: right;
+    width: 580px;
+    margin: 20px;
+    background: #E6E6E6;
+}
+
+#columna5{
+    float: right;
+    width: 50px;
+    margin: 20px 20px 0px ;
+    padding: 30px;
+}
+
+#seccion6{
+    float: left;
+    width: 580px;
+    margin: 20px;
+    background: #E6E6E6;
+}
+
+#columna6{
+    float: left;
+    width: 50px;
+    margin: 20px 20px 0px ;
+    padding: 30px;
+
+
 }
