@@ -1,0 +1,187 @@
+/*
+    Responda las siguientes preguntas.
+*/
+
+/*
+    ¿cuál es la diferencia entre id y class? 
+*/
+
+/*
+    ¿Qué sucede entre las líneas 5 y 8?
+*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+h1{
+    font-size: 30px;
+}
+
+h2{
+    font-size: 20px;
+}
+
+/*
+    ¿para qué nos sirve diplay: block?
+*/
+
+header, nav, section, article, aside, footer{
+    display: block;
+}
+
+/*
+    ¿para qué se utiliza text-align: center?
+*/
+
+body{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*
+    ¿Para qué se está utilizando el identificado #caja_principal?
+*/
+#caja_principal{
+    width: 900px;
+    margin: 15px auto;
+    text-align: left;
+
+}
+
+/*
+    ¿qué es padding y para qué se utiliza?
+*/
+#cabecera{
+    background: #FAFAFA;
+    border: 1px solid #000000;
+    padding: 20px;
+   
+}
+
+/*
+    ¿para qué nos sirve border, y cómo se utiliza?
+*/
+
+#barra_navegacion{
+    background: #F2F2F2;
+    border: 1px solid #000000;
+    padding: 5px 15px;
+
+}
+
+/*
+    ¿para qué nos sirve display: inline-block y list-style?
+*/
+#barra_navegacion li{
+    display: inline-block;
+    list-style: none;
+    padding: 5px;
+}
+
+/*
+    ¿comó afecta la propiedad "float" en los elementos (etiquetas o selectores) html?
+
+    ¿qué es margin y para qué se utiliza?
+
+    ¿para qué se utiliza la propiedad background?
+*/
+
+#seccion{
+    float: left;
+    width: 580px;
+    margin: 20px;
+    background: #E6E6E6;
+}
+
+/*
+    ¿porqué margin tiene dos valores (20px 0px) y cuantos valores puede tener?
+*/
+
+#columna{
+    float: right;
+    width: 200px;
+    margin: 20px 20px 0px  ;
+    padding: 20px;
+    background: #D8D8D8;
+}
+
+/*
+    ¿para que se utiliza el clear both y border-top?
+*/
+
+#pie{
+    clear: both;
+    text-align: center;
+    padding: 20px;
+    border-top: 2px solid black;
+}
+
+/*----------------------- 2 ----------------------*/
+
+#caja{
+    width: 900px;
+    margin: 15px auto;
+    text-align: left;
+}
+
+#cabecera2{
+    background: #FAFAFA;
+    border: 1px solid #000000;
+    padding: 20px;
+}
+
+#barra_navegacion2{
+    background: #F2F2F2;
+    border: 1px solid #000000;
+    padding: 5px 15px;
+
+}
+
+#barra_navegacion2 li{
+    display: inline-block;
+    list-style: none;
+    padding: 5px;
+}
+
+#seccion2{
+    float: left;
+    width: 580px;
+    margin: 20px;
+    background: #E6E6E6;
+}
+
+#columna2{
+    float: right;
+    width: 200px;
+    margin: 20px 20px 0px  ;
+    padding: 20px;
+}
+
+#seccion3{
+    float: right;
+    width: 580px;
+    margin: 20px;
+    background: #E6E6E6;
+}
+
+#columna3{
+    float: left;
+    width: 50px;
+    margin: 0px 10px 0px 0px ;
+    padding: 20px;
+}
+
+#seccion4{
+    float: left;
+    width: 580px;
+    margin: 20px;
+    background: #E6E6E6;
+}
+
+#columna4{
+    float: left;
+    width: 50px;
+    margin: 0px 10px 0px 0px ;
+    padding: 20px;
+}
