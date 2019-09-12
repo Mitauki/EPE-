@@ -1,17 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <body background="imagenes/Halloween_michael_myers_sticker.jpg"></body>
+    <body background="imagenes/myers.png"></body>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="estilo/style1.css">
+    <!-- invicar al css del reloj -->
+    <link rel="stylesheet" href="estilo/reloj.css">
+    <link rel="icon" href="imagenes/jess.ico">
     <title>Halloween</title>
     
 
 </head>
-<body>
-                <div id="sfc8p6e99h1ntbmxrrndxq1h5q4egzb5jfa"></div><script type="text/javascript" src="https://counter7.wheredoyoucomefrom.ovh/private/counter.js?c=8p6e99h1ntbmxrrndxq1h5q4egzb5jfa&down=async" async></script><noscript><a href="https://www.contadorvisitasgratis.com" title="gadgets contador de visitas para blog gratis"><img src="https://counter7.wheredoyoucomefrom.ovh/private/contadorvisitasgratis.php?c=8p6e99h1ntbmxrrndxq1h5q4egzb5jfa" border="0" title="gadgets contador de visitas para blog gratis" alt="gadgets contador de visitas para blog gratis"></a></noscript>
+<body> 
+        <!-- Codigo para el reproductor de musica -->
+         <script>
+                function cambiarTrack(track) {
+                   var path =  track.getAttribute("path")
+                   viejo_audio = document.getElementById("reproductor")
+                   audio_padre = viejo_audio.parentNode
+                   audio_padre.removeChild(viejo_audio)
+                   nuevo_audio = document.createElement("audio")
+                   nuevo_audio.setAttribute("id","reproductor")
+                   nuevo_audio.setAttribute("controls", "controls")
+                  // nuevo_audio.setAttribute("autoplay", "autoplay")
+                   source = document.createElement("source")
+                   source.setAttribute("src", path)
+                   source.setAttribute("type", "audio/mpeg")
+                   source.setAttribute("id", "reproductorSource")
+                   nuevo_audio.appendChild(source)
+                   audio_padre.appendChild(nuevo_audio)}
+                function cargarReproductor() {
+                         var select = document.getElementById("selectTrack")
+                         var path = select.options[0].getAttribute("path")
+                   nuevo_audio = document.createElement("audio")
+                   nuevo_audio.setAttribute("id","reproductor")
+                   nuevo_audio.setAttribute("controls", "controls")       
+                   source = document.createElement("source")
+                   source.setAttribute("src", path)
+                   source.setAttribute("type", "audio/mpeg")
+                   source.setAttribute("id", "reproductorSource")
+                   nuevo_audio.appendChild(source)
+                   padre = document.getElementById("reproductorBox")
+                   padre.appendChild(nuevo_audio)
+                }
+                </script>
+                <div id="reproductorBox"></div>
+                <select id = "selectTrack" multiple onchange="cambiarTrack(this.options[this.selectedIndex]);">
+                <option path="Myerssong.mp3">Halloween Theme song </option>
+                
+                </select>
+                <script>cargarReproductor();</script>
+                <br>
+                <br>
+                <a href="plantilla.html"> <img src="imagenes/assss.jpg" width="150px" height="150px"  alt=""/></a>
+
+    <div id="sfc8p6e99h1ntbmxrrndxq1h5q4egzb5jfa"></div><script type="text/javascript" src="https://counter7.wheredoyoucomefrom.ovh/private/counter.js?c=8p6e99h1ntbmxrrndxq1h5q4egzb5jfa&down=async" async></script><noscript><a href="https://www.contadorvisitasgratis.com" title="gadgets contador de visitas para blog gratis"><img src="https://counter7.wheredoyoucomefrom.ovh/private/contadorvisitasgratis.php?c=8p6e99h1ntbmxrrndxq1h5q4egzb5jfa" border="0" title="gadgets contador de visitas para blog gratis" alt="gadgets contador de visitas para blog gratis"></a></noscript>
     <div id="caja1">
     <header id="cabecera1">
             <h1>Actores</h1>
@@ -22,17 +67,14 @@
                     <a href="plantilla.html">Inicio</a>
                 </li>
                 <li>
-                    <a href="index.html">Peliculas</a>
+                    <a href="pag1.html">Peliculas</a>
                 </li>
                 <li>
                     <a href="quienes_somos.html">Quienes somos</a>
                 </li>
-                <li>
-                    <a href="plantilla.html">Al principio</a>
-                </li>
             </ul>
         </nav>
-        <section id="seccion1">
+        <section id="seccion1">+
             <article>
                 <h2>Reparto de cada pelicula</h2>
                 <br>
@@ -306,5 +348,33 @@
                 </small>
         </footer>
     </div>
+
+     <!--Reloj-->
+    <div class="contenedor">
+            <div class="widget">
+              <div class="fecha">
+                <p id="diaSemana" class="diaSemana"></p>
+                <p id="dia" class="dia"></p>
+                <p>de</p>
+                <p id="mes" class="mes"></p>
+                <p>del</p>
+                <p id="anio" class="anio"></p>
+              </div>
+              <div class="reloj">
+                <p id="horas" class="horas"></p>
+                <p>:</p>
+                <p id="minutos" class="minutos"></p>
+                <p>:</p>
+                <div class="cajaSegundos">
+                  <p id="ampm" class="ampm"></p>
+                  <p id="segundos" class="segundos"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+            <!-- invocar al js del reloj -->
+            <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+            <script  src="javaScript/reloj.js"></script>
+
 </body>
 </html>

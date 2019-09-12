@@ -22,6 +22,7 @@ header, nav, section, article, aside, footer{
 body{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
+    background-attachment: fixed;
 }
 
 
@@ -43,7 +44,7 @@ body{
 
 
 #barra_navegacion{
-    background: #F2F2F2;
+    background: rgb(0, 0, 0);
     border: 1px solid #000000;
     padding: 5px 15px;
 

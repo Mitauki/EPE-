@@ -1,21 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- 
-    Ejercicios:
-        - Seleccione algún tema de su gusto a desarrollar para este sitio.
-        - Asigne un nombre al sitio.
-        - Agregue una imagen (logo) en la cabecera con un enlace a la página principal.
-        - Utilice ésta misma plantilla para crear otras tres páginas.
-        - Mejore la barra de navegación. 
-        - Utilice una imágen fija para el fondo (de tal forma de que sólo el contenido se "mueva").
-        - Agregue 2 artículos/noticias/entradas con texto e imágenes.
-        - Agregue contenido en la etiqueta aside.
-        
--->
+
 
 
 <head>
-    <body background="imagenes/Halloween_michael_myers_sticker.jpg">
+    <body background="imagenes/myers.png"></body>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -24,11 +13,56 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+     <!-- invicar al css del reloj -->
+     <link rel="stylesheet" href="estilo/reloj.css">
+     <link rel="icon" href="imagenes/jess.ico">
     <title>Halloween</title>
     
 </head>
 
 <body>
+    <!-- Codigo para el reproductor de musica -->
+    <script>
+        function cambiarTrack(track) {
+           var path =  track.getAttribute("path")
+           viejo_audio = document.getElementById("reproductor")
+           audio_padre = viejo_audio.parentNode
+           audio_padre.removeChild(viejo_audio)
+           nuevo_audio = document.createElement("audio")
+           nuevo_audio.setAttribute("id","reproductor")
+           nuevo_audio.setAttribute("controls", "controls")
+          // nuevo_audio.setAttribute("autoplay", "autoplay")
+           source = document.createElement("source")
+           source.setAttribute("src", path)
+           source.setAttribute("type", "audio/mpeg")
+           source.setAttribute("id", "reproductorSource")
+           nuevo_audio.appendChild(source)
+           audio_padre.appendChild(nuevo_audio)}
+        function cargarReproductor() {
+                 var select = document.getElementById("selectTrack")
+                 var path = select.options[0].getAttribute("path")
+           nuevo_audio = document.createElement("audio")
+           nuevo_audio.setAttribute("id","reproductor")
+           nuevo_audio.setAttribute("controls", "controls")       
+           source = document.createElement("source")
+           source.setAttribute("src", path)
+           source.setAttribute("type", "audio/mpeg")
+           source.setAttribute("id", "reproductorSource")
+           nuevo_audio.appendChild(source)
+           padre = document.getElementById("reproductorBox")
+           padre.appendChild(nuevo_audio)
+        }
+        </script>
+        <div id="reproductorBox"></div>
+        <select id = "selectTrack" multiple onchange="cambiarTrack(this.options[this.selectedIndex]);">
+        <option path="Myerssong.mp3">Halloween Theme song </option>
+        
+        </select>
+        <script>cargarReproductor();</script>
+        <br>
+                <br>
+                <a href="plantilla.html"> <img src="imagenes/assss.jpg" width="150px" height="150px"  alt=""/></a>
+
     <div id="sfc8p6e99h1ntbmxrrndxq1h5q4egzb5jfa"></div><script type="text/javascript" src="https://counter7.wheredoyoucomefrom.ovh/private/counter.js?c=8p6e99h1ntbmxrrndxq1h5q4egzb5jfa&down=async" async></script><noscript><a href="https://www.contadorvisitasgratis.com" title="gadgets contador de visitas para blog gratis"><img src="https://counter7.wheredoyoucomefrom.ovh/private/contadorvisitasgratis.php?c=8p6e99h1ntbmxrrndxq1h5q4egzb5jfa" border="0" title="gadgets contador de visitas para blog gratis" alt="gadgets contador de visitas para blog gratis"></a></noscript>
     <div id="caja_principal">
         <header id="cabecera">
@@ -37,10 +71,7 @@
         <nav id="barra_navegacion">
             <ul>
                 <li>
-                    <a href="plantilla.html">Inicio</a>
-                </li>
-                <li>
-                    <a href="index.html">Peliculas</a>
+                    <a href="pag1.html">Peliculas</a>
                 </li>
                 <li>
                     <a href="actores.html">Actores</a>
@@ -69,7 +100,7 @@
                         
                         La franquicia Halloween es la saga de terror más taquillera, con unos
                         $620 millones de dólares mundialmente, le convierten en el puesto número
-                        uno del ranking de taquilla de todas las sagas de horror.1
+                        uno del ranking de taquilla de todas las sagas de horror.
                 </p>
             </article>
 
@@ -92,39 +123,37 @@
                 <!-- Codigo forma cascada -->
                 <div class="carousel-inner">
                   <div class="item active">
-                    <img src="imagenes/halloween.jpg" alt="Halloween" style="width: 500px">
-                  </div>
-              
-                  <div class="item">
-                    <img src="imagenes/halloween2.jpeg" alt="Halloween 2" style="width: 500px">
-                  </div>
-              
-                  <div class="item">
-                    <img src="imagenes/halloween 3.jpg" alt="Halloween 3" style="width: 500px">
+                    <img src="imagenes/hellowen.jpg" alt="Halloween" style="height: 600px; width: 500%;">
                   </div>
                   <div class="item">
-                    <img src="imagenes/Halloween_4_El_regreso_de_Michael_Myers-476103153-large.jpg" alt="Halloween 4" style="width: 500px">
+                    <img src="imagenes/halloween2.jpeg" alt="Halloween 2" style="height: 600px; width: 500%;">
                   </div>
                   <div class="item">
-                    <img src="imagenes/Halloween_5.jpg" alt="Halloween 5" style="width: 500px">
+                    <img src="imagenes/halloween 3.jpg" alt="Halloween 3" style="height: 600px; width: 500%;">
                   </div>
                   <div class="item">
-                    <img src="imagenes/halloween 6.jpg" alt="Halloween 6" style="width: 500px">
+                    <img src="imagenes/Halloween_4_El_regreso_de_Michael_Myers-476103153-large.jpg" alt="Halloween 4" style="height: 600px; width: 500%;">
                   </div>
                   <div class="item">
-                    <img src="imagenes/halloween 7.jpg" alt="Halloween 7" style="width: 500px">
+                    <img src="imagenes/Halloween_5.jpg" alt="Halloween 5" style="height: 600px; width: 500%;">
                   </div>
                   <div class="item">
-                    <img src="imagenes/Halloween_Resurrection-.jpg" alt="Halloween 8" style="width: 500px">
+                    <img src="imagenes/halloween 6.jpg" alt="Halloween 6" style="height: 600px; width: 500%;">
                   </div>
                   <div class="item">
-                    <img src="imagenes/halloween9.jpg" alt="Halloween 9" style="width: 500px">
+                    <img src="imagenes/halloween 7.jpg" alt="Halloween 7" style="height: 600px; width: 500%;">
                   </div>
                   <div class="item">
-                    <img src="imagenes/HALLOWEEN20II.jpg" alt="Halloween 10" style="width: 500px">
+                    <img src="imagenes/Halloween_Resurrection-.jpg" alt="Halloween 8" style="height: 600px; width: 500%;">
                   </div>
                   <div class="item">
-                    <img src="imagenes/la-noche-de-halloween.jpg" alt="Halloween 11" style="width: 500px">
+                    <img src="imagenes/halloween9.jpg" alt="Halloween 9" style="height: 600px; width: 500%;">
+                  </div>
+                  <div class="item">
+                    <img src="imagenes/HALLOWEEN20II.jpg" alt="Halloween 10" style="height: 600px; width: 500%;">
+                  </div>
+                  <div class="item">
+                    <img src="imagenes/la-noche-de-halloween.jpg" alt="Halloween 11" style="height: 600px; width: 500%;">
                   </div>
                 </div>
               
@@ -153,6 +182,8 @@
                 </li>
             </ol>
         </aside>
+
+
         <footer id="pie">
             <small >
                     <font color="white">
@@ -161,6 +192,34 @@
             </small>
         </footer>
     </div>
+
+   <!--Reloj-->
+   <div class="contenedor">
+      <div class="widget">
+        <div class="fecha">
+          <p id="diaSemana" class="diaSemana"></p>
+          <p id="dia" class="dia"></p>
+          <p>de</p>
+          <p id="mes" class="mes"></p>
+          <p>del</p>
+          <p id="anio" class="anio"></p>
+        </div>
+        <div class="reloj">
+          <p id="horas" class="horas"></p>
+          <p>:</p>
+          <p id="minutos" class="minutos"></p>
+          <p>:</p>
+          <div class="cajaSegundos">
+            <p id="ampm" class="ampm"></p>
+            <p id="segundos" class="segundos"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+      <!-- invocar al js del reloj -->
+      <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+      <script  src="javaScript/reloj.js"></script>
+
 </body>
 
 </html>

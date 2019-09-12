@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <body background="imagenes/myers.png"></body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="estilo/style1.css">
+    <!-- invicar al css del reloj -->
+    <link rel="stylesheet" href="estilo/reloj.css">
+    <link rel="icon" href="imagenes/jess.ico">
+    <title>Halloween</title>
+</head>
+
+<body>
+        <!-- Codigo para el reproductor de musica -->
+        <script>
+                function cambiarTrack(track) {
+                   var path =  track.getAttribute("path")
+                   viejo_audio = document.getElementById("reproductor")
+                   audio_padre = viejo_audio.parentNode
+                   audio_padre.removeChild(viejo_audio)
+                   nuevo_audio = document.createElement("audio")
+                   nuevo_audio.setAttribute("id","reproductor")
+                   nuevo_audio.setAttribute("controls", "controls")
+                  // nuevo_audio.setAttribute("autoplay", "autoplay")
+                   source = document.createElement("source")
+                   source.setAttribute("src", path)
+                   source.setAttribute("type", "audio/mpeg")
+                   source.setAttribute("id", "reproductorSource")
+                   nuevo_audio.appendChild(source)
+                   audio_padre.appendChild(nuevo_audio)}
+                function cargarReproductor() {
+                         var select = document.getElementById("selectTrack")
+                         var path = select.options[0].getAttribute("path")
+                   nuevo_audio = document.createElement("audio")
+                   nuevo_audio.setAttribute("id","reproductor")
+                   nuevo_audio.setAttribute("controls", "controls")       
+                   source = document.createElement("source")
+                   source.setAttribute("src", path)
+                   source.setAttribute("type", "audio/mpeg")
+                   source.setAttribute("id", "reproductorSource")
+                   nuevo_audio.appendChild(source)
+                   padre = document.getElementById("reproductorBox")
+                   padre.appendChild(nuevo_audio)
+                }
+                </script>
+                <div id="reproductorBox"></div>
+                <select id = "selectTrack" multiple onchange="cambiarTrack(this.options[this.selectedIndex]);">
+                <option path="Myerssong.mp3">Halloween Theme song </option>
+                
+                </select>
+                <script>cargarReproductor();</script>
+                <br>
+                <br>
+                <a href="plantilla.html"> <img src="imagenes/assss.jpg" width="150px" height="150px"  alt=""/></a>
+
+    <div id="sfc8p6e99h1ntbmxrrndxq1h5q4egzb5jfa"></div><script type="text/javascript" src="https://counter7.wheredoyoucomefrom.ovh/private/counter.js?c=8p6e99h1ntbmxrrndxq1h5q4egzb5jfa&down=async" async></script><noscript><a href="https://www.contadorvisitasgratis.com" title="gadgets contador de visitas para blog gratis"><img src="https://counter7.wheredoyoucomefrom.ovh/private/contadorvisitasgratis.php?c=8p6e99h1ntbmxrrndxq1h5q4egzb5jfa" border="0" title="gadgets contador de visitas para blog gratis" alt="gadgets contador de visitas para blog gratis"></a></noscript>
+    <div id="caja1">
+        <header id="cabecera1">
+            <h1>Franquicia Halloween (Pelicula)</h1>
+        </header>
+        <nav id="barra_navegacion1">
+            <ul>
+                <li>
+                    <a href="plantilla.html">Inicio</a>
+                </li>
+                <li>
+                    <a href="pag1.html">Peliculas</a>
+                </li>
+                <li>
+                    <a href="actores.html">Actores</a>
+                </li>
+                <li>
+                    <a href="quienes_somos.html">Quien somos</a>
+                </li>
+             
+                <li>
+                    <a href="pag2.html"><img width="50px" height="50px" src="imagenes/Siguiente.png"></a>
+                </li>
+            </ul>
+        </nav>
+        <section id="seccion1">
+            <article>
+                <h2>Primera Pelicula</h2>
+                <p>
+                    Halloween es una película de terror independiente de 1978 dirigida y orquestada
+                    por John Carpenter, co-escrita con la productora Debra Hill, y protagonizada 
+                    por Donald Pleasence y Jamie Lee Curtis en su debut cinematográfico. La película
+                    fue la primera entrega de lo que se ha convertido en la franquicia de Halloween 
+                    y generó siete secuelas y dos reinicios. En la película, en la noche de Halloween 
+                    de 1963, Michael Myers asesina a su hermana en la ciudad ficticia del Medio Oeste
+                    estadounidense de Haddonfield, Illinois. Quince años después, se escapa el 30 de 
+                    octubre de 1978 del sanatorio Smith's Grove y regresa a casa para matar de nuevo.
+                    Al día siguiente, Halloween, Michael acosa a la adolescente Laurie Strode. El 
+                    psiquiatra de Michael, el Dr. Sam Loomis, sabiendo las intenciones de Michael, 
+                    va a Haddonfield para encontrarlo y detenerlo. <br>
+                    <br>
+                    Halloween fue producido con un presupuesto de 300.000$ y recaudó 47 millones de 
+                    dólares en la taquilla en los Estados Unidos,2​ 23 millones de dólares a nivel 
+                    internacional, por un total de 70 millones de dólares en todo el mundo,​ equivalente 
+                    a aproximadamente 267 millones de dólares a partir de 2016, convirtiéndose en uno 
+                    de las películas independientes más rentables.​ Muchos críticos dan crédito a la
+                    película como la primera de una larga línea de películas slasher inspiradas por 
+                    Alfred Hitchcock en Psycho (1960). Halloween tuvo muchos imitadores y originó 
+                    varios clichés encontrados en las películas de terror de bajo presupuesto de los
+                    años 1980 y 1990. A diferencia de muchos de sus imitadores, Halloween contiene 
+                    poca violencia gráfica y gore.6​7​ Fue una de las primeras películas de terror en 
+                    introducir el concepto de la muerte del asesino y volver a la vida otra vez dentro 
+                    de la misma película. En 2006, la película fue seleccionada para ser preservada en 
+                    el National Film Registry de los Estados Unidos por Library of Congress como 
+                    "cultural, histórica o estéticamente significativa". <br>
+                    <br>
+                    Algunos críticos han sugerido que Halloween puede fomentar el sadismo y la 
+                    misoginia por las audiencias que se identifican con su villano.9​ Otros críticos 
+                    han sugerido que la película es una crítica social de la inmoralidad de los jóvenes 
+                    y adolescentes en la década de 1970 en Estados Unidos, con muchas de las víctimas de
+                    Myers ser sexualmente promiscuos abusando de sustancias,10​ mientras que la solitaria
+                    heroína se representa como inocente y pura, de ahí su supervivencia. Sin embargo,
+                    Carpenter rechaza tales análisis.11​12​ Varias de las técnicas de Halloween y los 
+                    elementos de la trama, aunque no fundada en esta película, se han convertido en tropos
+                    de las películas slasher estándares.13​ Halloween engendró siete secuelas y fue
+                    reiniciado en 2007.
+                        
+                </p>
+            </article>
+        </section>
+        
+        <aside id="columna1">
+                <img width="200px" width="200px" src="imagenes/hellowen.jpg"> <br>
+                <p></p><br> 
+                <hr>
+                <p>Ficha tecnica</p>
+                <hr>
+                <p>Direccion: John Carpenter</p>
+                <p>Producion: Debra Hill</p>
+                <p>Guion: John Carpenter</p>
+                <p>CooGuionista: Debra Hill</p>
+                <p>Musica: Jhon Carpenter</p>
+                <p>Fotografia: Dean Cundey</p>
+                <p>Estreno: 30 de octubre de 1978</p>
+                <p>Genero: Terror/Slasher</p>
+            
+        </aside>
+
+        
+
+        <footer id="pie1">
+            <small>
+                    <font color="white">
+                Santiago, 2019
+                    </font>
+                </small>
+        </footer>
+    </div>
+
+
+     <!--Reloj-->
+     <div class="contenedor">
+            <div class="widget">
+              <div class="fecha">
+                <p id="diaSemana" class="diaSemana"></p>
+                <p id="dia" class="dia"></p>
+                <p>de</p>
+                <p id="mes" class="mes"></p>
+                <p>del</p>
+                <p id="anio" class="anio"></p>
+              </div>
+              <div class="reloj">
+                <p id="horas" class="horas"></p>
+                <p>:</p>
+                <p id="minutos" class="minutos"></p>
+                <p>:</p>
+                <div class="cajaSegundos">
+                  <p id="ampm" class="ampm"></p>
+                  <p id="segundos" class="segundos"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+            <!-- invocar al js del reloj -->
+            <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+            <script  src="javaScript/reloj.js"></script>
+
+
+ </body>
+</html>

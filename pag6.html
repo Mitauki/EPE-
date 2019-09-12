@@ -2,15 +2,60 @@
 <html lang="en">
 
 <head>
-    <body background="imagenes/Halloween_michael_myers_sticker.jpg">
+    <body background="imagenes/myers.png"></body>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="estilo/style6.css">
+    <!-- invicar al css del reloj -->
+    <link rel="stylesheet" href="estilo/reloj.css">
+    <link rel="icon" href="imagenes/jess.ico">
     <title>Halloween</title>
 </head>
 
 <body>
+        <!-- Codigo para el reproductor de musica -->
+        <script>
+                function cambiarTrack(track) {
+                   var path =  track.getAttribute("path")
+                   viejo_audio = document.getElementById("reproductor")
+                   audio_padre = viejo_audio.parentNode
+                   audio_padre.removeChild(viejo_audio)
+                   nuevo_audio = document.createElement("audio")
+                   nuevo_audio.setAttribute("id","reproductor")
+                   nuevo_audio.setAttribute("controls", "controls")
+                  // nuevo_audio.setAttribute("autoplay", "autoplay")
+                   source = document.createElement("source")
+                   source.setAttribute("src", path)
+                   source.setAttribute("type", "audio/mpeg")
+                   source.setAttribute("id", "reproductorSource")
+                   nuevo_audio.appendChild(source)
+                   audio_padre.appendChild(nuevo_audio)}
+                function cargarReproductor() {
+                         var select = document.getElementById("selectTrack")
+                         var path = select.options[0].getAttribute("path")
+                   nuevo_audio = document.createElement("audio")
+                   nuevo_audio.setAttribute("id","reproductor")
+                   nuevo_audio.setAttribute("controls", "controls")       
+                   source = document.createElement("source")
+                   source.setAttribute("src", path)
+                   source.setAttribute("type", "audio/mpeg")
+                   source.setAttribute("id", "reproductorSource")
+                   nuevo_audio.appendChild(source)
+                   padre = document.getElementById("reproductorBox")
+                   padre.appendChild(nuevo_audio)
+                }
+                </script>
+                <div id="reproductorBox"></div>
+                <select id = "selectTrack" multiple onchange="cambiarTrack(this.options[this.selectedIndex]);">
+                <option path="Myerssong.mp3">Halloween Theme song </option>
+                
+                </select>
+                <script>cargarReproductor();</script>
+                <br>
+                <br>
+                <a href="plantilla.html"> <img src="imagenes/assss.jpg" width="150px" height="150px"  alt=""/></a>
+
     <div id="caja6">
         <header id="cabecera6">
             <h1>Franquicia Halloween (Pelicula)</h1>
@@ -24,7 +69,7 @@
                     <a href="plantilla.html">Inicio</a>
                 </li>
                 <li>
-                    <a href="index.html">Peliculas</a>
+                    <a href="pag1.html">Peliculas</a>
                 </li>
                 <li>
                     <a href="actores.html">Actores</a>
@@ -73,5 +118,33 @@
                 </small>
         </footer>
     </div>
+
+     <!--Reloj-->
+     <div class="contenedor">
+            <div class="widget">
+              <div class="fecha">
+                <p id="diaSemana" class="diaSemana"></p>
+                <p id="dia" class="dia"></p>
+                <p>de</p>
+                <p id="mes" class="mes"></p>
+                <p>del</p>
+                <p id="anio" class="anio"></p>
+              </div>
+              <div class="reloj">
+                <p id="horas" class="horas"></p>
+                <p>:</p>
+                <p id="minutos" class="minutos"></p>
+                <p>:</p>
+                <div class="cajaSegundos">
+                  <p id="ampm" class="ampm"></p>
+                  <p id="segundos" class="segundos"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+            <!-- invocar al js del reloj -->
+            <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+            <script  src="javaScript/reloj.js"></script>
+
  </body>
 </html>
